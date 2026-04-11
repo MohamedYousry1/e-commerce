@@ -1,0 +1,10 @@
+{
+    "name": "sohag/api",
+    "authors": [
+        {
+            "name": "mohamed yosry",
+            "email": "mohamedyosry701@gmail.com"
+        }
+    ],
+    "require": {}
+}
