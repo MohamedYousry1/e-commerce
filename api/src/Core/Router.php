@@ -12,7 +12,7 @@ class Router
      * تقوم بحفظ نوع الطلب (HTTP Method) والمسار (URI)
      * مع الـ action الخاص بالـ Controller لاستخدامهم لاحقًا عند استقبال الطلب.
      */
-    public function addRoute(string $method, string $uri, string $action)
+    public function addRoute(string $method, string $uri, array $action)
     {
         // store route
         $this->routes[] = [
@@ -31,7 +31,7 @@ class Router
 
     // هي اللي "تشغل" الـ routing -- ال function دى
     // check if there is route matches
-    public function dispatch(string $requestMethod, string $requestUri)
+    public function dispatch($requestMethod, $requestUri)
     {
         foreach ($this->routes as $route) {
             if ($route['method'] === $requestMethod && $route['uri'] === $requestUri) {
